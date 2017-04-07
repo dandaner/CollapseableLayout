@@ -1,0 +1,8 @@
+<resources>
+    <declare-styleable name="CollapseableLayout">
+        <attr name="collapse_shrink_height" format="dimension" />
+        <attr name="collapse_header" format="reference" />
+        <attr name="collapse_content" format="reference" />
+        <attr name="collapse_scroll" format="reference" />
+    </declare-styleable>
+</resources>

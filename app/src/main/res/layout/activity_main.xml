@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    android:id="@+id/activity_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.demon.library.CollapseableLayout
+        android:id="@+id/collapseablelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:collapse_content="@+id/content"
+        app:collapse_header="@+id/header"
+        app:collapse_scroll="@+id/recyclerview"
+        app:collapse_shrink_height="@dimen/title_bar_height"
+        tools:context="com.demon.collapseablelayout.MainActivity">
+
+        <FrameLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/header_height"
+            android:background="#2000FFFF"
+            android:paddingTop="@dimen/title_bar_height">
+
+            <TextView
+                android:id="@+id/header_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="66℃"
+                android:textSize="80dp" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#22ff4499"
+                android:gravity="center"
+                android:text="内容标题" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </com.demon.library.CollapseableLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="#88ff0000"
+        android:gravity="center"
+        android:text="标题栏"
+        android:textSize="28dp" />
+</FrameLayout>
